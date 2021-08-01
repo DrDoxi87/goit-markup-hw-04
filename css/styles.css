@@ -72,11 +72,16 @@ img {
 .logo > span {
   color: #000000;
 }
+.link {
+  text-decoration: none;
+}
 
 /*Навигация по сайту,
 Контакты в шапке*/
 header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
+  max-width: 1600px;
+  margin: auto;
 }
 
 .container-header {
@@ -122,6 +127,7 @@ nav,
 .contact-header .link:hover,
 .contact-header .link:focus {
   color: var(--accent-color);
+  --color4: var(--accent-color);
 }
 
 .site-nav .link.current {
@@ -131,6 +137,9 @@ nav,
 /*Контакты в шапке*/
 .contact-header .link {
   color: var(--secondary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contact-header {
   display: flex;
@@ -142,11 +151,38 @@ nav,
   margin-left: 50px;
 }
 
+.envelope-icon,
+.smartphone-icon {
+  background-size: contain;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.envelope-icon,
+.smartphone-icon {
+  background-size: contain;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 /*Герой*/
 .hero {
   text-align: center;
 
-  background-color: #2f303a;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/bg-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero .container {
@@ -213,7 +249,7 @@ nav,
   width: calc((100%-90) / 4);
 }
 
-.advantages-item > h3 {
+.advantages-description > h3 {
   margin-bottom: 10px;
 
   text-transform: uppercase;
@@ -222,11 +258,21 @@ nav,
   letter-spacing: 0.03em;
 }
 
-.advantages-item > p {
+.advantages-description > p {
   color: var(--secondary-text-color);
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.advantages-icon {
+  background-color: #f5f4fa;
+  padding: 25px 100px;
+  border-radius: 4px;
+}
+
+.advantages-description {
+  padding-top: 30px;
 }
 
 /*Чем мы занимаемся,
@@ -241,7 +287,8 @@ nav,
 }
 
 .functions-title,
-.team-title {
+.team-title,
+.clients-title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -256,9 +303,12 @@ nav,
 
 /* Наша команда */
 .team {
+  max-width: 1600px;
+
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
+  margin: auto;
 }
 
 .team-items {
@@ -269,7 +319,7 @@ nav,
 
 .team-card {
   width: 270px;
-  height: 368px;
+  /* height: 368px; */
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -278,8 +328,7 @@ nav,
 }
 
 .team .card-description {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 
 .team-card h3 {
@@ -301,14 +350,64 @@ nav,
 
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.team-social-links {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding-left: 0px;
+  justify-content: space-between;
+}
+
+.team-social-links .icon:hover {
+  --color3: var(--title-text-color);
+  --color5: var(--accent-color);
+}
+
+.team-social-links a {
+  display: block;
+  height: 44px;
+}
+
+/* Постоянные клиенты */
+section.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-icons {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0px;
+  list-style: none;
+}
+
+.clients-icons a:hover,
+.clients-icons a:focus {
+  --color3: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-icons a {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.clients .link.icon {
+  display: block;
 }
 
 /* Подвал */
 .footer {
   background-color: #2f303a;
+  max-width: 1600px;
+  margin: auto;
 }
 
-.footer .logo > span {
+.footer .logo span {
   color: var(--title-text-color);
 }
 
@@ -353,7 +452,50 @@ footer .logo {
   color: var(--accent-color);
 }
 
-/* -----ПОРТФОЛИО----- */
+.footer-flex {
+  display: flex;
+}
+
+footer .footer-icons {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer-icons .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-icons .icon {
+  display: block;
+  --color3: var(--title-text-color);
+  --color5: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icons .icon:hover,
+.footer-icons .icon:focus {
+  --color5: var(--accent-color);
+}
+
+footer .footer-contacts {
+  margin-right: 70px;
+}
+
+footer .footer-social-links {
+  padding-top: 12px;
+}
+
+footer .footer-title-social {
+  font-size: 14px;
+  line-height: 1, 14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--title-text-color);
+}
+
+/*===========================================-----ПОРТФОЛИО----- */
 
 /* Проекты WebStudio */
 .projects .projects-title {
@@ -420,6 +562,12 @@ section.projects {
 
 .projects-card:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.projects-card:hover,
+.projects-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-cards h2 {
