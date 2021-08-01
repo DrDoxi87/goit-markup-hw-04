@@ -80,7 +80,6 @@ img {
 Контакты в шапке*/
 header {
   border-bottom: 1px solid rgba(236, 236, 236, 1);
-  max-width: 1600px;
   margin: auto;
 }
 
@@ -303,8 +302,6 @@ nav,
 
 /* Наша команда */
 .team {
-  max-width: 1600px;
-
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
@@ -361,7 +358,8 @@ nav,
   justify-content: space-between;
 }
 
-.team-social-links .icon:hover {
+.team-social-links .icon:hover,
+.team-social-links .icon:focus {
   --color3: var(--title-text-color);
   --color5: var(--accent-color);
 }
@@ -403,7 +401,6 @@ section.clients {
 /* Подвал */
 .footer {
   background-color: #2f303a;
-  max-width: 1600px;
   margin: auto;
 }
 
