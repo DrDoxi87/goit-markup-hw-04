@@ -353,7 +353,6 @@ nav,
 .team-social-links {
   display: flex;
   align-items: center;
-  height: 44px;
   padding-left: 0px;
   justify-content: space-between;
 }
@@ -366,7 +365,7 @@ nav,
 
 .team-social-links a {
   display: block;
-  height: 44px;
+  max-height: 44px;
 }
 
 /* Постоянные клиенты */
@@ -396,6 +395,7 @@ section.clients {
 
 .clients .link.icon {
   display: block;
+  max-height: 92px;
 }
 
 /* Подвал */
